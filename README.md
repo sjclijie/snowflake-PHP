@@ -11,9 +11,13 @@ ID 生成策略
 ```
 
 前41bits是以微秒为单位的timestamp。
+
 接着10bits是事先配置好的机器ID。
+
 最后12bits是累加计数器。
+
 macheine id(10bits)标明最多只能有1024台机器同时产生ID，sequence number(12bits)也标明1台机器1ms中最多产生4096个ID，
+
 
 `
 注意点，因为使用到位移运算，所以需要64位操作系统，不然生成的ID会有可能不正确
